@@ -1,0 +1,193 @@
+@import url(../vendor/normalize.css);
+
+.page {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #d3bebd;
+}
+
+.header {
+    max-width: 1440px;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__title {
+    max-width: 700px;
+    font-family: 'Courier New';
+    font-size: 42px;
+    line-height: 42px;
+    color: #000;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+.drum {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.drum__button {
+    display: block;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 190px;
+    height: 75px;
+    border-radius: 100px;
+    background-color: blue;
+    color: #fff;
+    font-family: 'Arial';
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    animation: scale linear infinite 2s;
+}
+
+.drum__button:hover {
+    opacity: 0.8;
+}
+
+.drum__arrow {
+    font-size: 80px;
+    margin: 0 auto 0 auto;
+    width: 100px;
+    height: 70px;
+    text-align: center;
+}
+
+.drum__hidden {
+    max-width: 600px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 9999px;
+}
+
+.drum__circle {
+    width: 600px;
+    height: 600px;
+    background-image: url(../images/KolesoBalansaZap_1000.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition:1s;
+    transition:1s;
+    transition-timing-function: ease;
+    border-radius: 9999px;
+}
+
+@keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+
+.drum__triangle {
+    width: 727px;
+    height: 727px;
+    position: absolute;
+    background-image: url(../../../images/triangle.svg);
+    background-size: 727px 727px;
+    top: 0;
+    right: -150px;
+    background-repeat: no-repeat;
+    animation: rotation linear infinite 20s;
+    z-index: -1;
+    overflow: hidden;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.footer {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer__copyright {
+    margin: 0 0 0 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .header__title {
+        max-width: 600px;
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .drum__button {
+        width: 170px;
+        height: 65px;
+    }
+
+    .drum__arrow {
+        width: 90px;
+    }
+
+    .drum__hidden {
+        width: 500px;
+        height: 500px;
+    }
+
+    .drum__circle {
+        width: 500px;
+        height: 500px;
+    }
+
+    .drum__triangle {
+        width: 627px;
+        height: 627px;
+        background-size: 627px 627px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .header__title {
+        max-width: 300px;
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .drum {
+        margin-top: 20px;
+    }
+
+    .drum__arrow {
+        width: 70px;
+    }
+
+    .drum__hidden {
+        width: 300px;
+        height: 300px;
+    }
+
+    .drum__circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .drum__triangle {
+        width: 327px;
+        height: 327px;
+        background-size: 327px 327px;
+    }
+}
